@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Heart Disease Prediction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        * { font-size: 20px; }
+
+        /* Split the screen in half */
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Left side */
+        .left {
+            left: 0;
+            background-color: #fff36b;
+        }
+
+        /* Right side */
+        .right {
+            right: 0;
+            background-color: #c0ebe6;
+        }
+
+        /* Center content */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Style the image */
+        .centered img {
+            width: 250px;
+            border-radius: 50%;
+        }
+
+        /* Background Image */
+        body {
+            background-image: url('signupbg.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        /* Input Fields */
+        #entry {
+            font-size: 18px;
+            height: 40px;
+            width: 300px;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #entry:hover {
+            background-color: #fcfcfc;
+        }
+
+        /* Submit Button */
+        #submit {
+            font-size: 22px;
+            border-radius: 8px;
+            background-color: #94d6e3;
+            width: 200px;
+            border: none;
+            padding: 8px;
+        }
+
+        #submit:hover {
+            background-color: #2d8ea1;
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media only screen and (max-width: 768px) {
+            .split {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .left, .right {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="split left">
+    <div class="centered">
+        <!-- Animated Heart Image from Gifer -->
+        <img src="https://i.gifer.com/5xYC.gif" alt="Animated Heart">
+        <h5>Heart Disease Prediction</h5>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <h6>Login Page</h6>
+        <hr>
+        <form action="/login" method="POST">
+            <input type="text" name="un" placeholder="Enter Username" required id="entry"><br><br>
+            <input type="password" name="pw" placeholder="Enter Password" required id="entry"><br><br>
+            <input type="submit" value="Login" id="submit"><br>
+        </form>
+        <h4><a style="font-size: 18px;" href="{{ url_for('signup') }}">New User? Register here</a></h4>
+        <h4><a style="font-size: 18px;" href="{{ url_for('forgot') }}">Forgot Password?</a></h4>
+        <h4 style="color: red;">{{ msg }}</h4>
+    </div>
+</div>
+
+</body>
+</html>
