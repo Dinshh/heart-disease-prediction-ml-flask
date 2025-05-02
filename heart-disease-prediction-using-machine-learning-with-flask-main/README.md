@@ -1,65 +1,92 @@
-# heart-disease-prediction
-Deployed Application:
-link - https://10monica.pythonanywhere.com/
+# Heart Disease Prediction using Machine Learning and Flask 🫀🤖
 
-Introduction-
-This is a fully validated multi-user application, where a user can check if he/she has heart disease or not by filling a short form which collects data from the heart disease prediction model and returns with a response based on the dataset used. 
+This project is a web application built with **Flask** and **Machine Learning** that predicts the likelihood of heart disease based on user input such as age, gender, blood pressure, cholesterol level, and more.
 
-Keywords- 
-ML, Flask, RandomForestClassifier, HTML, CSS, Bootstrap
+## 🚀 Features
 
-Dataset-
-Heart Disease Prediction dataset from kaggle.com
-Link - https://www.kaggle.com/rishidamarla/heart-disease-prediction
+- Predicts the presence of heart disease using a trained ML model
+- Interactive web interface using Flask
+- Preprocessed dataset for higher accuracy
+- User input form with real-time result display
+- Easy-to-use and responsive design
 
-Machine Learning - 
-Made use of Random Forest Classifier Algorithm, used random state = 3136
+## 🧠 Machine Learning
 
-Model prediction Accuracy - 
-87%
+- **Algorithm used:** Logistic Regression (can be replaced with Random Forest, SVM, etc.)
+- **Dataset:** [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
+- **Libraries:** `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `flask`
 
-Flask-
-Backend of the entire web application has been programmed in Flask, with a app.py controlling the major functionalities and the connections to all pages. 
-Used Flask mail for sending randomly generated passwords to users when they try to sign in, and will then be redirected to the login page as soon as we send the email containing the password of the particular user. 
-Re-using the same username won't be possible as it has been set as the primary key. 
-A forgot password page has been made just in case the user forgets their password to the application.
-All the forms are fully validated, including the quiz form inside which is the main functionality of the application. Responses to the form are used alongside the data present in the dataset to make the prediction.
+## 📁 Project Structure
 
-HTML, CSS, BOOTSTRAP -
-The entire frontend of the application have been made using html, css and bootstrap. And the application is fully responsive and is fully functional on all device widths.
+heart-disease-prediction-ml-flask/
+│
+├── static/ # CSS/JS files
+├── templates/ # HTML templates
+│ └── index.html
+├── model/ # Trained ML model (.pkl)
+├── app.py # Main Flask application
+├── model_training.ipynb # Jupyter Notebook for model building
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
-Database-Sqlite3
-name - monicaheart.db
-table name - user
+bash
+Copy
+Edit
 
-Screenshots-
-Signup page-
-![image](https://user-images.githubusercontent.com/82702672/145677319-294c2f3f-3384-42d0-848a-2ecdae03e70b.png)
+## 🛠️ How to Run
 
-Login page-
-![image](https://user-images.githubusercontent.com/82702672/145677364-c4020995-e143-463b-9c46-652ab26eb8b2.png)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/heart-disease-prediction-ml-flask.git
+   cd heart-disease-prediction-ml-flask
+Install the dependencies
 
-Forgot Password-
-![image](https://user-images.githubusercontent.com/82702672/145677379-0a27c60a-0abc-4ca1-9254-c8910b96d66b.png)
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the Flask app
 
-Home Page-
-![image](https://user-images.githubusercontent.com/82702672/145677406-a3940c4a-a6e2-451c-b790-a9df910e899f.png)
-![image](https://user-images.githubusercontent.com/82702672/145677419-c6f720a2-bf2f-4f8c-9a46-0babb0cc28a1.png)
-![image](https://user-images.githubusercontent.com/82702672/145677424-c5497e31-1f57-406c-b838-287f54a12112.png)
-![image](https://user-images.githubusercontent.com/82702672/145677431-91c5cf18-25ce-49a6-be78-e47f2b23355f.png)
+bash
+Copy
+Edit
+python app.py
+Visit in your browser
 
-Quiz Page-
-![image](https://user-images.githubusercontent.com/82702672/145677438-292c9ddd-a508-4fe7-9f3e-234b9beb7446.png)
+cpp
+Copy
+Edit
+http://127.0.0.1:5000/
+📊 Sample Input Parameters
+Age
 
-Contributors-
-Solo Project - Monica Gullapalli
+Sex
 
-Deployed Web Application link -
-https://10monica.pythonanywhere.com/signup
+Chest Pain Type
 
+Resting Blood Pressure
 
+Cholesterol
 
+Fasting Blood Sugar
 
+Rest ECG
 
+Max Heart Rate Achieved
 
+Exercise Induced Angina
 
+Oldpeak
+
+Slope
+
+Number of Major Vessels
+
+Thal
+
+📷 Screenshots
+![Screenshot 2025-03-09 095520](https://github.com/user-attachments/assets/001eb6c1-c327-4a99-b435-f71cc91e7875)
+![Screenshot 2025-03-09 101237](https://github.com/user-attachments/assets/8a86ee76-53ea-482a-b9c3-a621897671b7)
+![Screenshot 2025-03-09 101431](https://github.com/user-attachments/assets/34c15b74-03ed-489b-be15-3c2b0af6608f)
+![Screenshot 2025-03-09 102016](https://github.com/user-attachments/assets/77b0281d-0afb-450a-b018-c5f7a2dd7b62)
+![Screenshot 2025-03-09 102301](https://github.com/user-attachments/assets/9be15df6-a22b-4669-a3c9-ead6a19e32ae)
